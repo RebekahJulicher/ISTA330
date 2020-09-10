@@ -1,181 +1,204 @@
-
+// howManyTeams
 const q1 = [{
-    input: [[5, 6, 1]],
-    output: [5, 11, 12]
-},
-{
-    input: [[43, -3, -39]],
-    output: [43, 40, 1]
-}];
-
-const q2 = [{
-    input: [[5, 6, 1], 6],
-    output: true
-},
-{
-    input: [[3, 5, 2], 6],
-    output: false
-}];
-
-const q3 = [{
-    input: [[5, 6, 1]],
+    input: [[2,5,3,4,1]],
     output: 1
 },
 {
-    input: [[3, 5, 2, 8]],
-    output: 4
-}];
-
-const q4 = [{
-    input: ['asDf', 'dsssaaFa'],
-    output: 6
-},
-{
-    input: ['te', 'TTTER'],
+    input: [[2,1,3]],
     output: 0
 }];
-
+// findDuplicates
+const q2 = [{
+    input: [[19,3,2,10,8,2,3,5]],
+    output: [2,3]
+},
+{
+    input: [[-17,3,1,5,-9,1,10]],
+    output: [1]
+}];
+// kStepAway
+const q3 = [{
+    input: [[1,0,0,0,1,0,0,1], 2],
+    output: true
+},
+{
+    input: [[1,0,0,1,0,1], 2],
+    output: false
+}];
+// powerSet
+const q4 = [{
+    input: [[1,2,3]],
+    output: [
+        [],   
+        [1],
+        [2],
+        [3],  
+        [1,3],
+        [2,3],
+        [1,2],
+        [1,2,3]
+      ]
+},
+{
+    input: [[1,2]],
+    output: [
+        [],
+        [1],
+        [2],
+        [1,2]
+    ]
+}];
+// productOfOthers
 const q5 = [{
-    input: [12],
-    output: 3
+    input: [[1,2,3,4]],
+    output: [24,12,8,6]
 },
 {
-    input: [19],
-    output: 5
+    input: [[7, 10, 5]],
+    output: [50, 35, 70]
 }];
-
+// longestNested
 const q6 = [{
-    input: [[1, 2, 2, 3, 4, 7, 9 ]],
-    output: 3
+    input: [[5,4,0,3,1,6,2]],
+    output: 4
 },
 {
-    input: [[1, 2, 3, 4, 5, 6, 7, 8]],
-    output: 4.5
+    input: [[4,3,2,0,1]],
+    output: 4
 }];
-
+// minPath
 const q7 = [{
-    input: [[4, 3, 8, 0]],
-    output: 4
+    input: [[
+        [1,3,1],
+        [1,5,1],
+        [4,2,1]
+      ]],
+    output: 7
 },
 {
-    input: [[1, 3, 4, 2, 6, 8, 5, 7]],
-    output: 16
+    input: [[
+        [1,2,3],
+        [1,4,5],
+        [4,3,2]
+      ]],
+    output: 12
 }];
-
+// sortColors
 const q8 = [{
-    input: [[23, 44, 12, 4]],
-    output: [1, 0, 1, 2]
+    input: [[2,0,2,1,1,0]],
+    output: [0,0,1,1,2,2]
 },
 {
-    input: [[1, 3, 4, 2, 6, 8, 5, 7]],
-    output: [4, 3, 2, 3, 1, 0, 2, 1]
+    input: [[0,1,2,1,1,2]],
+    output: [0,1,1,1,2,2]
 }];
-
+// minMoves
 const q9 = [{
-    input: ['llheo', [2, 3, 0, 1, 4]],
-    output: 'hello'
+    input: [[1,2,2]],
+    output: 1
 },
 {
-    input: ['emelwco', [1, 5, 6, 2, 0, 3, 4]],
-    output: 'welcome'
+    input: [[3,2,1,2,1,7]],
+    output: 6
 }];
-
+// isPalindrome
 const q10 = [{
-    input: [472],
-    output: 5
+    input: ['Was it a car or a cat I saw?'],
+    output: true
 },
 {
-    input: [87034],
-    output: 8
+    input: ['A man, a plane, a canal – Panama'],
+    output: false
 }];
-
+// romanToInteger
 const q11 = [{
-    input: [[2, 5, 4, 2]],
-    output: [5, 5, 2, 2, 2, 2]
-},
-{
-    input: [[0, 8, 1, 3, 2, 7]],
-    output: [3, 7, 7]
-}];
-
-const q12 = [{
-    input: ['abaabbabab'],
+    input: ["IV"],
     output: 4
 },
 {
-    input: ['aaababbb'],
-    output: 2
+    input: ["MCMXCIV"],
+    output: 1994
+}];
+
+// isCrossing
+const q12 = [{
+    input: ["NESSESW"],
+    output: false
+},
+{
+    input: ["NESWW"],
+    output: true
 }];
 
 let result = [{
-    functionName: 'runningSum',
-    functionCode: runningSum,
+    functionName: 'howManyTeams',
+    functionCode: howManyTeams,
     trials: [],
     cases: q1
 },
 {
-    functionName: 'canGetEqualCookies',
-    functionCode: canGetEqualCookies,
+    functionName: 'findDuplicates',
+    functionCode: findDuplicates,
     trials: [],
     cases: q2
 },
 {
-    functionName: 'numberOfOrderedPairs',
-    functionCode: numberOfOrderedPairs,
+    functionName: 'kStepAway',
+    functionCode: kStepAway,
     trials: [],
     cases: q3
 },
 {
-    functionName: 'howManyCommon',
-    functionCode: howManyCommon,
+    functionName: 'powerSet',
+    functionCode: powerSet,
     trials: [],
     cases: q4
 },
 {
-    functionName: 'minimalReduction',
-    functionCode: minimalReduction,
+    functionName: 'productOfOthers',
+    functionCode: productOfOthers,
     trials: [],
     cases: q5
 },
 {
-    functionName: 'median',
-    functionCode: median,
+    functionName: 'longestNested',
+    functionCode: longestNested,
     trials: [],
     cases: q6
 },
 {
-    functionName: 'maxSumOfMins',
-    functionCode: maxSumOfMins,
+    functionName: 'minPath',
+    functionCode: minPath,
     trials: [],
     cases: q7
 },
 {
-    functionName: 'biggerAndEven',
-    functionCode: biggerAndEven,
+    functionName: 'sortColors',
+    functionCode: sortColors,
     trials: [],
     cases: q8
 },
 {
-    functionName: 'suffleString',
-    functionCode: suffleString,
+    functionName: 'minMoves',
+    functionCode: minMoves,
     trials: [],
     cases: q9
 },
 {
-    functionName: 'maxMinusMin',
-    functionCode: maxMinusMin,
+    functionName: 'isPalindrome',
+    functionCode: isPalindrome,
     trials: [],
     cases: q10
 },
 {
-    functionName: 'decode',
-    functionCode: decode,
+    functionName: 'romanToInteger',
+    functionCode: romanToInteger,
     trials: [],
     cases: q11
 },
 {
-    functionName: 'maxBalanceNumber',
-    functionCode: maxBalanceNumber,
+    functionName: 'isCrossing',
+    functionCode: isCrossing,
     trials: [],
     cases: q12
 }
@@ -199,12 +222,13 @@ function isEqual(a1, a2){
 }
 
 for(let f of result){
-    for(let x of f.cases){    
+    for(let x of f.cases){
         let trial = {status: 'failed',
          input: x.input + "",
         expected: x.output, 
         output: undefined};
         trial.output = f.functionCode(...x.input);
+        
         if(isEqual(x.output, trial.output)) {
             trial.status = 'success'
         }
