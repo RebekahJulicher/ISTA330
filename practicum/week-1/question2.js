@@ -25,5 +25,10 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
         if (needed == extraCookies) {
                 return true
         }
+        if (extraCookies > needed) {
+                if ((extraCookies - needed) % cookies.length == 0) {
+                        return true
+                }
+        }
         return false
  };
