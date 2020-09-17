@@ -23,7 +23,7 @@ var largestGroupsCount = function(n) {
 
     for (let i = 1; i <= n; i++){
         let sum = 0;
-        while (value) {
+        while (value > 0) {
             sum += value % 10;
             value = Math.floor(n / 10);
         }
