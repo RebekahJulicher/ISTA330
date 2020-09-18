@@ -26,5 +26,17 @@ output:  4
 
 var longestNested = function(A) {
      // while loop nested in a for loop checking for duplicates
-     
+     let longest = 0;
+     for (i = 0; i < A.length; i++){
+          let used = [A[i]];
+          let curr = A[i];
+          while (used.includes(curr) == false){
+               curr = A[curr];
+               used.push(curr);
+          }
+          if (used.length > longest){
+               longest = used.length;
+          }
+     }
+     return longest;
 };
