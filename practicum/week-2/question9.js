@@ -26,11 +26,12 @@ var largestGroupsCount = function(n) {
         let sum = 0;
         let trackValue = 0
         trackValue += i
+        /*
         while (trackValue > 0) {
             sum += trackValue % 10;
             trackValue = Math.floor(n / 10);
         }
-
+        */
         let found = false;
         for (let i; i < trackerList.length; i++){
             let numList = trackerList[i];
