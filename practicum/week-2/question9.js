@@ -20,7 +20,8 @@ var largestGroupsCount = function(n) {
         return (9)
     }
 
-    // This is my Give-Up Commit
+    // I hate doing this the long way, but this should work for any positive 
+    // number you can throw at it
     else{
         let trackerList = []
 
@@ -61,16 +62,4 @@ var largestGroupsCount = function(n) {
         return output;
 }
 
-    /*
-    i = 0
-    while ((19 + (9 * (i))) <= n){
-        i += 1
-    }
-    if (i < 9){
-        if (n % 9 != 0){
-            return ((n % 9) - i)
-        }
-        return (9 - i)
-    }
-    */
 };

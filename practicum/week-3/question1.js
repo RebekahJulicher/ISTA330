@@ -34,4 +34,5 @@ var howManyTeams = function(input) {
                         }
                 }
         }
+        return output;
 };
