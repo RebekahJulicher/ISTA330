@@ -28,7 +28,7 @@ var isCrossing = function(s) {
         }
 
         else if (direction == 'W'){
-            currLocation[1] -= 1;
+            currLocation[0] -= 1;
         }
 
         for (let locations of visited){
