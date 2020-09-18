@@ -38,7 +38,7 @@ var romanToInteger = function(s) {
     let output = 0;
     for (let i = s.length - 1; i >= 0; i--){
         let curr = s.charAt(i);
-        let prev = s.charAt(i-1);
+        let prev = s.charAt(i+1);
 
         if (curr == 'I'){
             if (i == s.length - 1 || (prev != 'V' && prev != 'X')){
