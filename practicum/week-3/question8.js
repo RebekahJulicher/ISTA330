@@ -13,5 +13,38 @@ output: [0,0,1,1,2,2]
 */
 
 var sortColors = function(input) {
+    for (i = 0; i < (input.length - 1); i++){
+        let check = 0;
+        let exists = false
+        let swap = false;
 
+        while(swap == false){
+            if (input[i] == check){
+                swap = true;
+            }
+            else{
+                for (let num = i + 1; num < input.length; num++){
+                    if (input[num] == check){
+                        exists = true;
+                    }
+                }
+                if (exists == true){
+                    let j = i + 1;
+                    while (j < input.length && swap == false){
+                        if (input[j] == check){
+                            input[i],input[j] = input[j],input[i];
+                            swap = true;
+                        }
+                        j += 1
+                    }
+                
+                }
+                else{
+                    check += 1;
+                }
+            }
+        }
+
+    }
+    return input;
 };
