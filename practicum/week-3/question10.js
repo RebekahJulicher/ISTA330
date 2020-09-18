@@ -18,7 +18,7 @@ var isPalindrome = function(s) {
     let stripped = [];
     for (let i = 0; i < s.length; i++){
         let curr = s.charAt(i)
-        if (curr.toLowerCase() != curr.toUpperCase()){
+        if (((/[a-zA-Z]/).test(curr)) == true){
             stripped.push(curr.toLowerCase());
         }
     }
@@ -31,5 +31,5 @@ var isPalindrome = function(s) {
         }
     }
 
-    return [reversed,stripped];
+    return output;
 };
