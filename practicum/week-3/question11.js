@@ -38,11 +38,12 @@ var romanToInteger = function(s) {
     let output = 0;
     for (let i = s.length; i >= 0; i--){
         let curr = s.charAt(i);
+        let prev = s.charAt(i-1);
         if (curr == 'I'){
-            if (i == s.length || ['V','X'].includes(s.charAt(i-1)) == false){
+            if (i == s.length || (prev != 'V' && prev != 'X')){
                 output += 1;
             }
-            if (['V','X'].includes(s.charAt(i-1)) == true){
+            else if (prev == 'V' || prev == 'X'){
                 output -= 1;
             }
         }
@@ -52,10 +53,10 @@ var romanToInteger = function(s) {
         }
         
         if (curr == 'X'){
-            if (i == s.length || ['L','C'].includes(s.charAt(i-1)) == false){
+            if (i == s.length || (prev != 'L' && prev != 'C')){
                 output += 10;
             }
-            if (['L','C'].includes(s.charAt(i-1)) == true){
+            else if (prev == 'L' || prev == 'C'){
                 output -= 10;
             }
         }
@@ -65,10 +66,10 @@ var romanToInteger = function(s) {
         }
 
         if (curr == 'C'){
-            if (i == s.length || (['D','M'].includes(s.charAt(i-1))) == false){
+            if (i == s.length || (prev != 'D' && prev != 'M')){
                 output += 100;
             }
-            if (['D','M'].includes(s.charAt(i-1)) == true){
+            else if (prev == 'D' || prev == 'M'){
                 output -= 100;
             }
         }
@@ -76,7 +77,7 @@ var romanToInteger = function(s) {
         if (curr == 'D'){
             output += 500;
         }
-        if (curr == 'D'){
+        if (curr == 'M'){
             output += 1000;
         }
 
