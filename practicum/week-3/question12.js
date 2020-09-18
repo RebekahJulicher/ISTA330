@@ -43,7 +43,7 @@ var isCrossing = function(s) {
         visited.push(currLocation);
     }
 
-    return visited, 'hi';
+    return visited;
     return true;
 
 };
