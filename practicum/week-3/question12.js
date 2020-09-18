@@ -32,18 +32,15 @@ var isCrossing = function(s) {
             currLocation[0] -= 1;
         }
 
-        /*
         for (let locations of visited){
             if (locations[0] == currLocation[0] && 
                 locations[1] == currLocation[1]){
                     return false;
                 }
         }
-        */
         visited.push([currLocation[0],currLocation[1]]);
     }
 
-    return visited;
     return true;
 
 };
