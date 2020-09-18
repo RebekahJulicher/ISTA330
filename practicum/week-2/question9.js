@@ -19,47 +19,53 @@ var largestGroupsCount = function(n) {
         }
         return (9)
     }
+    else{
+        let trackerList = []
 
-    let trackerList = [[1],[2],[3],[4],[5],[6],[7],[8],[9]]
-
-    for (let i = 10; i <= n; i++){
-        let sum = 0;
-        let trackValue = 0
-        trackValue += i
-        /*
-        while (trackValue > 0) {
-            sum += trackValue % 10;
-            trackValue = Math.floor(n / 10);
-        }
-        */
-        let found = false;
-        for (let i; i < trackerList.length; i++){
-            let numList = trackerList[i];
-            if (numList[0] == sum){
-                numList.push(sum);
-                found = true;
+        for (let i = 1; i <= n; i++){
+            let sum = 0;
+            while (value > 0) {
+                sum += value % 10;
+                value = Math.floor(n / 10);
+            }
+            let found = false;
+            for (let numList of trackerList){
+                if (numList[0] == sum){
+                    numList.push(sum);
+                    found = true;
+                }
+            }
+            if (found == false){
+                trackerList.push([sum])
             }
         }
-        if (found == false){
-            trackerList.push([sum])
+
+        let longest = 0;
+        for (let item of trackerList){
+            if (item.length > longest){
+                longest = item.length;
+            }
         }
-    }
-    return "hi"
-    /*
-    let longest = 0;
-    for (let item of trackerList){
-        if (item.length > longest){
-            longest = item.length;
+        let output = 0;
+        for (let item of trackerList){
+            if (item.length == longest){
+                output += 1;
+            }
         }
-    }
-    let output = 0;
-    for (let itemCheck of trackerList){
-        if (itemCheck.length == longest){
-            output += 1;
-        }
+
+        return output;
     }
 
-    return output;
-    return "test";
-*/
+    /*
+    i = 0
+    while ((19 + (9 * (i))) <= n){
+        i += 1
+    }
+    if (i < 9){
+        if (n % 9 != 0){
+            return ((n % 9) - i)
+        }
+        return (9 - i)
+    }
+    */
 };
