@@ -24,16 +24,18 @@ var powerSet = function(input) {
   let output = [];
   output.push([]);
 
-  for (let i = 0; i < (input.length - 1); i++){
+  for (let i = 0; i < (input.length); i++){
     let current = input[i];
     let runningTotal = [current];
+    
+    if (i < input.length - 1){
+      for (let j = i + 1; j < input.length; j++){
+        runningTotal.push(input[j]);
+        output.push([current, input[j]]);
 
-    for (let j = i + 1; j < input.length; j++){
-      runningTotal.push(input[j]);
-      output.push([current, input[j]]);
-
-      if (output.includes(runningTotal) == false){
-        output.push(runningTotal);
+        if (output.includes(runningTotal) == false){
+          output.push(runningTotal);
+        }
       }
     }
   }
