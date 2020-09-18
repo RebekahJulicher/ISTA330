@@ -20,9 +20,9 @@ var largestGroupsCount = function(n) {
         return (9)
     }
     else{
-        let trackerList = [[1],[2],[3],[4],[5],[6],[7],[8],[9]]
+        let trackerList = []
 
-        for (let i = 10; i <= n; i++){
+        for (let i = 1; i <= n; i++){
             let sum = 0;
             let value = 0;
             value += i;
@@ -30,6 +30,7 @@ var largestGroupsCount = function(n) {
                 sum += value % 10;
                 value = Math.floor(n / 10);
             }
+            
             let found = false;
             for (let numList of trackerList){
                 if (numList[0] == sum){
@@ -41,7 +42,7 @@ var largestGroupsCount = function(n) {
                 trackerList.push([sum])
             }
         }
-        return trackerList;
+        return "hi";
 
         let longest = 0;
         for (let item of trackerList){
