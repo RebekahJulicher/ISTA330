@@ -17,14 +17,14 @@ var isPalindrome = function(s) {
 
     let stripped = [];
     for (let i = 0; i < s.length; i++){
-        let curr = charAt(i)
+        let curr = s.charAt(i)
         if (curr.toLowerCase() != curr.toUpperCase()){
             stripped.push(curr.toLowerCase());
         }
     }
 
     let output = true;
-    let reversed = reverse(stripped);
+    let reversed = stripped.reverse();
     for (let x = 0; x < s.length; x++){
         if (stripped[x] != reversed[x]){
             output = false;
