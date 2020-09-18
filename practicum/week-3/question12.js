@@ -19,15 +19,15 @@ var isCrossing = function(s) {
             currLocation[1] += 1;
         }
 
-        else if (direction == 'S'){
+        if (direction == 'S'){
             currLocation[1] -= 1;
         }
 
-        else if (direction == 'E'){
+        if (direction == 'E'){
             currLocation[0] += 1;
         }
 
-        else if (direction == 'W'){
+        if (direction == 'W'){
             currLocation[0] -= 1;
         }
 
@@ -41,6 +41,7 @@ var isCrossing = function(s) {
         */
         visited.push(currLocation);
     }
+    
     return visited;
     return true;
 
