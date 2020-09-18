@@ -29,6 +29,7 @@ var isPalindrome = function(s) {
         if (stripped[a] != stripped[b]){
             output = false;
         }
+        a += 1
     }
 
 
