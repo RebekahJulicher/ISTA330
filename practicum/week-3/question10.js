@@ -18,18 +18,19 @@ var isPalindrome = function(s) {
     let stripped = [];
     for (let i = 0; i < s.length; i++){
         let curr = s.charAt(i)
-        if ((((/[a-zA-Z]/).test(curr)) == true) || curr == 'e'){
+        if ((curr.toLowerCase() != curr.toUpperCase())){
             stripped.push(curr.toLowerCase());
         }
     }
 
     let output = true;
-    let reversed = stripped.reverse();
-    for (let x = 0; x < s.length; x++){
-        if (stripped[x] != reversed[x]){
+    let a = 0;
+    for (b = stripped.length; b >= 0; b--){
+        if (stripped[a] != stripped[b]){
             output = false;
         }
     }
+
 
     return output;
 };
