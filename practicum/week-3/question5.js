@@ -10,7 +10,15 @@ output: [24,12,8,6]
 */
 
 var productOfOthers = function(input) {
-
+    let output = [];
+    for (let i = 0; i < input.length; i++){
+        let product = 1;
+        for (j = 0; j < input.length; j++){
+            if (i != j){
+                product *= input[j];
+            }
+        }
+        output.push(product);
+    }
+    return output;
 };
-
-console.log('hi');
