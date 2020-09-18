@@ -30,9 +30,11 @@ var sortColors = function(input) {
                 }
                 if (exists == true){
                     let j = i + 1;
+                    let value = input[i];
                     while (j < input.length && swap == false){
                         if (input[j] == check){
-                            input[i],input[j] = input[j],input[i];
+                            input[i] = check;
+                            input[j] = value;
                             swap = true;
                         }
                         j += 1
