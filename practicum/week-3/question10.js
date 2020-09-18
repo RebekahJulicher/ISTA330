@@ -32,6 +32,5 @@ var isPalindrome = function(s) {
         a += 1
     }
 
-    return stripped;
     return output;
 };
