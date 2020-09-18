@@ -28,7 +28,6 @@ var powerSet = function(input) {
     let current = input[i];
     let runningTotal = [current];
     
-    if (i < input.length - 1){
       for (let j = i + 1; j < input.length; j++){
         runningTotal.push(input[j]);
         output.push([current, input[j]]);
@@ -37,7 +36,6 @@ var powerSet = function(input) {
           output.push(runningTotal);
         }
       }
-    }
   }
   return output;
 
