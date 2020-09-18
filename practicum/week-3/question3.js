@@ -14,12 +14,12 @@ var kStepAway = function(input, k) {
         if (input[i] == 1){
             let count = 0;
             for (let j = i + 1; j < input.length; j++){
-                count += 1
                 if (input[j] == 1){
                     if (count < k){
                         output = false;
                     }
                 }
+                count += 1
             }
         }
     }
