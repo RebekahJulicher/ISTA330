@@ -19,17 +19,20 @@ var largestGroupsCount = function(n) {
         }
         return (9)
     }
+
+    // This is my Give-Up Commit
     else{
         let trackerList = []
 
         for (let i = 1; i <= n; i++){
             let sum = 0;
-            let value = 0;
+            let number = 0;
             value += i;
             while (value > 0) {
                 sum += value % 10;
-                value = Math.floor(n / 10);
+                value = Math.floor(value / 10);
             }
+
             let found = false;
             for (let numList of trackerList){
                 if (numList[0] == sum){
