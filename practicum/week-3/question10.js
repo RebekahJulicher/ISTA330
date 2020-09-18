@@ -25,7 +25,7 @@ var isPalindrome = function(s) {
 
     let output = true;
     let a = 0;
-    for (b = stripped.length; b >= 0; b--){
+    for (b = (stripped.length - 1); b >= 0; b--){
         if (stripped[a] != stripped[b]){
             output = false;
         }
