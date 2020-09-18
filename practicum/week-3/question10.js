@@ -11,5 +11,24 @@ output: true
 */
 
 var isPalindrome = function(s) {
+    if (s.length == 0){
+        return true;
+    }
+    
+    let stripped = [];
+    for (let i = 0; i < s.length; i++){
+        if ((/[a-zA-Z]/).test(charAt(i)) == true){
+            stripped.push(toLowerCase(CharAt(i)));
+        }
+    }
 
+    let output = true;
+    let reversed = reverse(stripped);
+    for (let x = 0; x < s.length; x++){
+        if (stripped[x] != reversed[x]){
+            output = false;
+        }
+    }
+
+    return output;
 };
