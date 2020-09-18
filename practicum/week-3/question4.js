@@ -23,13 +23,15 @@ var powerSet = function(input) {
   // and the number and check number mini list
   let output = [];
   output.push([]);
-  output.push(input);
-  for (let i = 0; i < input.length; i++){
+
+  for (let i = 0; i < (input.length - 1); i++){
     let current = input[i];
     let runningTotal = [current];
+
     for (let j = i + 1; j < input.length; j++){
       runningTotal.push(input[j]);
       output.push([current, input[j]]);
+
       if (output.includes(runningTotal) == false){
         output.push(runningTotal);
       }
