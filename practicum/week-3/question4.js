@@ -33,7 +33,7 @@ var powerSet = function(input) {
         runningTotal.push(input[j]);
         output.push([current, input[j]]);
 
-        if (output.includes(runningTotal) == false){
+        if (runningTotal.length != 2){
           output.push(runningTotal);
         }
       }
