@@ -13,21 +13,22 @@ Example:
 var isCrossing = function(s) {
     let visited = [[0,0]];
     let currLocation = [0,0];
+
     for (i = 0; i < s.length; i++){
         let direction = s.charAt(i);
         if (direction == 'N') {
             currLocation[1] += 1;
         }
 
-        if (direction == 'S'){
+        else if (direction == 'S'){
             currLocation[1] -= 1;
         }
 
-        if (direction == 'E'){
+        else if (direction == 'E'){
             currLocation[0] += 1;
         }
 
-        if (direction == 'W'){
+        else if (direction == 'W'){
             currLocation[0] -= 1;
         }
 
@@ -41,8 +42,8 @@ var isCrossing = function(s) {
         */
         visited.push(currLocation);
     }
-    
-    return visited;
+
+    return visited, 'hi';
     return true;
 
 };
