@@ -35,12 +35,12 @@ var isCrossing = function(s) {
         for (let locations of visited){
             if (locations[0] == currLocation[0] && 
                 locations[1] == currLocation[1]){
-                    return false;
+                    return true;
                 }
         }
         visited.push([currLocation[0],currLocation[1]]);
     }
 
-    return true;
+    return false;
 
 };
