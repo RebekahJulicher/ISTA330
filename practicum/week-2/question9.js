@@ -24,9 +24,11 @@ var largestGroupsCount = function(n) {
 
         for (let i = 1; i <= n; i++){
             let sum = 0;
-            while (i > 0) {
-                sum += i % 10;
-                i = Math.floor(n / 10);
+            let trackValue = 0
+            trackValue += i
+            while (trackValue > 0) {
+                sum += trackValue % 10;
+                trackValue = Math.floor(n / 10);
             }
 
             let found = false;
