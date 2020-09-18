@@ -11,5 +11,34 @@ Example:
 */
 
 var isCrossing = function(s) {
+    let visited = [[0,0]];
+    let currLocation = [0,0];
+    for (i = 0; i < s.length; i++){
+        let direction = s.charAt(i);
+        if (direction == 'N') {
+            currLocation[1] += 1;
+        }
+
+        else if (direction == 'S'){
+            currLocation[1] -= 1;
+        }
+
+        else if (direction == 'E'){
+            currLocation[0] += 1;
+        }
+
+        else if (direction == 'W'){
+            currLocation[1] -= 1;
+        }
+
+        for (let locations of visited){
+            if (locations[0] == currLocation[0] && 
+                locations[1] == currLocation[1]){
+                    return false;
+                }
+        }
+        visited.push(currLocation);
+    }
+    return true;
 
 };
