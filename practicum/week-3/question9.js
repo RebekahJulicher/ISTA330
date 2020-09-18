@@ -13,6 +13,7 @@ output: 1
 var minMoves = function(A) {
     let output = 0;
     let checkList = [A[0]];
+
     for (let i = 1; i < A.length; i++){
         let current = A[i];
         let sorted = false;
@@ -30,6 +31,7 @@ var minMoves = function(A) {
             else{
                 A[i] = current;
                 sorted = true;
+                checkList.push(A[i])
             }
         }
     }
