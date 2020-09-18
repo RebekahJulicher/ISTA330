@@ -29,15 +29,14 @@ var longestNested = function(A) {
      let longest = 0;
      for (i = 0; i < A.length; i++){
           let used = [A[i]];
-          let curr = A[i];
+          let curr = A[A[i]];
           while (used.includes(curr) == false){
-               curr = A[curr];
                used.push(curr);
+               curr = A[curr];
           }
           if (used.length > longest){
                longest = used.length;
           }
      }
-     return "hi";
      return longest;
 };
