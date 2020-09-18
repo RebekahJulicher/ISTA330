@@ -38,5 +38,6 @@ var longestNested = function(A) {
                longest = used.length;
           }
      }
+     return "hi";
      return longest;
 };
