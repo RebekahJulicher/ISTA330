@@ -18,7 +18,7 @@ var isPalindrome = function(s) {
     let stripped = [];
     for (let i = 0; i < s.length; i++){
         let curr = s.charAt(i)
-        if (((/[a-zA-Z]/).test(curr)) == true){
+        if ((((/[a-zA-Z]/).test(curr)) == true) || curr == 'e'){
             stripped.push(curr.toLowerCase());
         }
     }
