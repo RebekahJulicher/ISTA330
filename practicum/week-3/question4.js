@@ -19,13 +19,12 @@ Example:
 */
 
 var powerSet = function(input) {
-  //running total list and for lists, return running total list
-  // and the number and check number mini list
   let output = [];
   output.push([]);
 
-  for (let i = 0; i < (input.length); i++){
+  for (let i = 0; i < input.length; i++){
     let current = input[i];
+    output.push([current]);
     let runningTotal = [current];
     
       for (let j = i + 1; j < input.length; j++){
