@@ -12,9 +12,9 @@ Example:
 
 var isCrossing = function(s) {
     let visited = [[0,0]];
+    let currLocation = [0,0];
 
     for (i = 0; i < s.length; i++){
-        let currLocation = visited[visited.length - 1];
         let direction = s.charAt(i);
         if (direction == 'N') {
             currLocation[1] += 1;
@@ -40,7 +40,7 @@ var isCrossing = function(s) {
                 }
         }
         */
-        visited.push(currLocation);
+        visited.push([currLocation[0],currLocation[1]]);
     }
 
     return visited;
