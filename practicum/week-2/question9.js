@@ -42,6 +42,7 @@ var largestGroupsCount = function(n) {
                 trackerList.push([sum])
             }
         }
+        return trackerList;
         /*
         let longest = 0;
         for (let item of trackerList){
