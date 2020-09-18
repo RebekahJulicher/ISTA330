@@ -11,6 +11,6 @@ Example: input: [19,3,2,10,8,2,3,5]
           */
 
  var findDuplicates = function(input) {
-     
+     // 19 not considered because it's greater than the size of the array
     
  };

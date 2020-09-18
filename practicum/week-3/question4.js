@@ -5,7 +5,7 @@ return all possible subsets (the power set).
 The solution set must not contain duplicate subsets.
  
 Example:
- input: [1,2,3]
+ input: [1,2,3,4,5]
  output: [
   [],   
   [1],
@@ -19,5 +19,7 @@ Example:
 */
 
 var powerSet = function(input) {
+  //running total list and for lists, return running total list
+  // and the number and check number mini list
 
 };
