@@ -14,11 +14,12 @@ var isPalindrome = function(s) {
     if (s.length == 0){
         return true;
     }
-    
+
     let stripped = [];
     for (let i = 0; i < s.length; i++){
-        if ((/[a-zA-Z]/).test(charAt(i)) == true){
-            stripped.push(toLowerCase(CharAt(i)));
+        let curr = charAt(i)
+        if (curr.toLowerCase() != curr.toUpperCase()){
+            stripped.push(curr.toLowerCase());
         }
     }
 
