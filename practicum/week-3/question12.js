@@ -31,6 +31,7 @@ var isCrossing = function(s) {
             currLocation[0] -= 1;
         }
 
+        return "hi";
         for (let locations of visited){
             if (locations[0] == currLocation[0] && 
                 locations[1] == currLocation[1]){
