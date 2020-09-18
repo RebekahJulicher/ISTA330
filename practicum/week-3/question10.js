@@ -31,5 +31,5 @@ var isPalindrome = function(s) {
         }
     }
 
-    return output;
+    return [reversed,stripped];
 };
