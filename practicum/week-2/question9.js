@@ -22,17 +22,12 @@ var largestGroupsCount = function(n) {
     else{
         let trackerList = []
 
-        let i = 1;
-        while(i <= n){
+        for (let i = 1; i <= n; i++){
             let sum = 0;
-            let value = 0;
-            value += i;
-            /*
             while (value > 0) {
                 sum += value % 10;
                 value = Math.floor(n / 10);
             }
-            */
             let found = false;
             for (let numList of trackerList){
                 if (numList[0] == sum){
@@ -43,25 +38,23 @@ var largestGroupsCount = function(n) {
             if (found == false){
                 trackerList.push([sum])
             }
-            i += 1;
-            
         }
 
         let longest = 0;
-        for (let i = 0; i < trackerList.length; i++){
-            if (trackerList[i].length > longest){
-                longest = trackerList[i].length;
+        for (let item of trackerList){
+            if (item.length > longest){
+                longest = item.length;
             }
         }
         let output = 0;
-        for (let i = 0; i < trackerList.length; i++){
-            if (trackerList[i].length == longest){
+        for (let itemCheck of trackerList){
+            if (itemCheck.length == longest){
                 output += 1;
             }
         }
 
         return output;
-    }
+}
 
     /*
     i = 0
