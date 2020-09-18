@@ -36,11 +36,12 @@ output: 4
 
 var romanToInteger = function(s) {
     let output = 0;
-    for (let i = s.length; i >= 0; i--){
+    for (let i = s.length - 1; i >= 0; i--){
         let curr = s.charAt(i);
         let prev = s.charAt(i-1);
+
         if (curr == 'I'){
-            if (i == s.length || (prev != 'V' && prev != 'X')){
+            if (i == s.length - 1 || (prev != 'V' && prev != 'X')){
                 output += 1;
             }
             else if (prev == 'V' || prev == 'X'){
@@ -53,7 +54,7 @@ var romanToInteger = function(s) {
         }
         
         if (curr == 'X'){
-            if (i == s.length || (prev != 'L' && prev != 'C')){
+            if (i == s.length - 1 || (prev != 'L' && prev != 'C')){
                 output += 10;
             }
             else if (prev == 'L' || prev == 'C'){
@@ -66,7 +67,7 @@ var romanToInteger = function(s) {
         }
 
         if (curr == 'C'){
-            if (i == s.length || (prev != 'D' && prev != 'M')){
+            if (i == s.length - 1 || (prev != 'D' && prev != 'M')){
                 output += 100;
             }
             else if (prev == 'D' || prev == 'M'){
