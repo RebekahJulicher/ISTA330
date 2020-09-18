@@ -19,6 +19,7 @@ var largestGroupsCount = function(n) {
         }
         return (9)
     }
+    /*
     else{
         let trackerList = []
 
@@ -28,6 +29,7 @@ var largestGroupsCount = function(n) {
                 sum += value % 10;
                 value = Math.floor(n / 10);
             }
+
             let found = false;
             for (let numList of trackerList){
                 if (numList[0] == sum){
@@ -55,5 +57,7 @@ var largestGroupsCount = function(n) {
 
         return output;
     }
+    */
+   return "test";
 
 };
