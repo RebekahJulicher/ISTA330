@@ -56,16 +56,4 @@ var largestGroupsCount = function(n) {
         return output;
     }
 
-    /*
-    i = 0
-    while ((19 + (9 * (i))) <= n){
-        i += 1
-    }
-    if (i < 9){
-        if (n % 9 != 0){
-            return ((n % 9) - i)
-        }
-        return (9 - i)
-    }
-    */
 };

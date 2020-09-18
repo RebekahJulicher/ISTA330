@@ -17,5 +17,6 @@ output: 7
 */
 
 var minPath = function(M) {
+  // 
 
 };

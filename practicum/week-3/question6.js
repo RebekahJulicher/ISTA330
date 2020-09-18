@@ -25,5 +25,6 @@ output:  4
 */
 
 var longestNested = function(A) {
-
+     // while loop nested in a for loop checking for duplicates
+     
 };
