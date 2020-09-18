@@ -35,5 +35,52 @@ output: 4
 */
 
 var romanToInteger = function(s) {
+    let output = 0;
+    for (let i = s.length; i >= 0; i--){
+        let curr = s.charAt(i);
+        if (curr == 'I'){
+            if (i == s.length || s.charAt(i-1).includes(['V','X']) == false){
+                output += 1;
+            }
+            if (s.charAt(i-1).includes(['V','X']) == true){
+                output -= 1;
+            }
+        }
+
+        if (curr == 'V'){
+            output += 5;
+        }
+        
+        if (curr == 'X'){
+            if (i == s.length || s.charAt(i-1).includes(['L','C']) == false){
+                output += 10;
+            }
+            if (s.charAt(i-1).includes(['L','C']) == true){
+                output -= 10;
+            }
+        }
+
+        if (curr == 'L'){
+            output += 50;
+        }
+
+        if (curr == 'C'){
+            if (i == s.length || s.charAt(i-1).includes(['D','M']) == false){
+                output += 100;
+            }
+            if (s.charAt(i-1).includes(['D','M']) == true){
+                output -= 100;
+            }
+        }
+
+        if (curr == 'D'){
+            output += 500;
+        }
+        if (curr == 'D'){
+            output += 1000;
+        }
+
+    }
+    return output;
 
 };
