@@ -14,9 +14,6 @@ output: 1
 */
 
 var d_count = function(input1, input2, d) {
-    /* I'm assuming we're checking for |input1[i]-input2[j]| >= d
-    because that's the only way that example could work.
-    */
     let count = 0
     for (i = 0; i < input1.length; i++){
         let check = true
