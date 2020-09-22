@@ -22,3 +22,4 @@ var productOfOthers = function(input) {
     }
     return output;
 };
+
