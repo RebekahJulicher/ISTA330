@@ -54,14 +54,12 @@
 
         let flowersDiv = document.getElementById('flowersDiv');
        
-        for (let i = 0; i < flowers.length; i++) {
-
+        for (let plant of flowers) {
             let plantDiv = document.createElement("div");
-            plantDiv.id = "plantDiv" + i;
+            plantDiv.id = plant.name;
             plantDiv.style.width = '25%';
             plantDiv.style.display = "inline-block";
 
-            let plant = flowers[i];
             let pic = document.createElement("img");
             pic.src = "images/" + plant.picture;
             pic.style.marginLeft = "auto";
