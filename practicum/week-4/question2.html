@@ -83,8 +83,8 @@
         }
         let daffodil = new Flower('Daffodil', 'daffodil.png');
         let cherryblossom = new Flower('Cherry blossom', 'cherryblossom.png');
-        let lily = new Flower('Lily', 'lily.png');
-        let daisy = new Flower('Daisy', 'daisy.png');
+        let lily = new Flower('Lily', 'lily.jpg');
+        let daisy = new Flower('Daisy', 'daisy.jpg');
         let sunflower = new Flower('Sunflower', 'sunflower.png');
         let tulip = new Flower('Tulip', 'tulip.png');
         let rose = new Flower('Rose', 'rose.png');
@@ -100,6 +100,74 @@
             rose,
             waterlily
         ];
+        
+        var sortFlowers = function(flowers, first){
+            flowers.sort(function (x, y) {
+                let a = x.name.toLowerCase();
+                let b = y.name.toLowerCase();
+                if (a < b) {
+                    return -1;
+                }
+                if (a > b){
+                    return 1;
+                }
+                return 0;
+            });
+
+            console.log(flowers);
+
+            let index = 0;
+            for (let i = 0; i < flowers.length; i++){
+                if (flowers[i].name == first){
+                    index = i;
+                }
+            }
+            console.log(flowers);
+            let sortedFlowers = flowers.slice(index).concat(flowers.slice(0,index));
+            console.log(sortedFlowers);
+            return sortedFlowers;
+        }
+        
+        var changePage = function(flowers, plant){
+            let flowersDiv = document.getElementById('flowersDiv');
+            flowers = sortFlowers(flowers, plant.name);
+            printToPage(flowers);
+        }
+
+        var printToPage = function(flowers){
+            let flowersDiv = document.getElementById('flowersDiv');
+            flowersDiv.innerHTML = "";
+        
+            for (let plant of flowers) {
+                let plantButton = document.createElement("button");
+                plantButton.id = plant.name;
+                plantButton.style.width = '25%';
+                plantButton.style.display = "inline-block";
+
+                let pic = document.createElement("img");
+                pic.src = "images/" + plant.picture;
+                pic.style.marginLeft = "auto";
+                pic.style.marginRight = "auto";
+                pic.style.width = "100%";
+
+                let text = document.createElement("h3");
+                text.innerText = plant.name;
+                text.style.textAlign = "center";
+                text.style.marginTop = 0;
+
+                plantButton.appendChild(pic);
+                plantButton.appendChild(text);
+                flowersDiv.appendChild(plantButton);
+                
+                plantButton.addEventListener("click", event => {
+                    changePage(flowers, plant);
+                });
+                
+            }
+        }
+
+        printToPage(flowers);
+
     </script>
 </body>
 
