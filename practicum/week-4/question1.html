@@ -15,7 +15,7 @@
         and under the image display its name.
     </div>
     <div id='flowersDiv'>
-
+        
     </div>
     <script>
         /*
@@ -51,6 +51,33 @@
              rose,
              waterlily
        ];
+
+        let flowersDiv = document.getElementById('flowersDiv');
+       
+        for (let i = 0; i < flowers.length; i++) {
+
+            let plantDiv = document.createElement("div");
+            plantDiv.id = "plantDiv" + i;
+            plantDiv.style.width = '25%';
+            plantDiv.style.display = "inline-block";
+
+            let plant = flowers[i];
+            let pic = document.createElement("img");
+            pic.src = "images/" + plant.picture;
+            pic.style.marginLeft = "auto";
+            pic.style.marginRight = "auto";
+            pic.style.width = "100%";
+
+            let text = document.createElement("h3");
+            text.innerText = plant.name;
+            text.style.textAlign = "center";
+            text.style.marginTop = 0;
+
+            plantDiv.appendChild(pic);
+            plantDiv.appendChild(text);
+            flowersDiv.appendChild(plantDiv);
+        }
+
     </script>
 </body>
 </html>
